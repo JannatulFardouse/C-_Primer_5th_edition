@@ -1,0 +1,29 @@
+/*--
+ Exercise 1.6: Explain whether the following program fragment is legal.
+std::cout << "The sum of " << v1;
+<< " and " << v2;
+<< " is " << v1 + v2 << std::endl;
+
+If the program is legal, what does it do? If the program is not legal, why not? How
+would you fix it?
+
+ --*/
+
+ // Solution by Jannatul Fardouse
+
+The given fragment is i 3 line code and they are :
+line 1 is : 
+    std::cout << "The sum of " << v1;
+line 2 : 
+     << " and " << v2;
+line 3:
+    << " is " << v1 + v2 << std::endl;
+
+The following fragment is not legal becasue, the left shift arrow or the token cannot be used without a primary expression.
+So, line 1 is correct where as line 2 and 3 need to add std::cout expression before "<<" left shift arrow.
+
+A legal or correct way could be wriiten as following code: 
+
+        std::cout << "The sum of " << v1;
+        std::cout << " and " << v2;
+        std::cout << " is " << v1 + v2 << std::endl;
