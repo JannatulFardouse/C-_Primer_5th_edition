@@ -11,7 +11,7 @@ would you fix it?
 
  // Solution by Jannatul Fardouse
 
-The given fragment is i 3 line code and they are :
+The given fragment is having in 3 lines of code and they are :
 line 1 is : 
     std::cout << "The sum of " << v1;
 line 2 : 
