@@ -3,7 +3,12 @@
 number in the range specified by those two integers. 
 --*/
 
-/* now we are going to print the range of two integers */
+// Solution by Jannatul Fardouse
+
+/*-- now we are going to print the range of two integers 
+where we will use the greater than '>' 
+and less than '<' operator to compare the starting and ending range of the two integer numbers
+--*/
 
 #include <iostream>
 
@@ -15,7 +20,15 @@ int main(){
     std:: cout << " Enter the max integer number or end of range ";
     std:: cin>>max;
 
-    //simple valid data entred by the user
+    //simplification of the data entred by the user
+
+if(min > max){
+    std:: cout << " Error: The start range must be larger than the end range!!";
+}
+while(min <= max){
+    std:: cout<< min<<std::endl;
+    min++;
+}
 
     return 0;
 }
