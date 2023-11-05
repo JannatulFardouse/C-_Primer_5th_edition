@@ -7,21 +7,19 @@
 
 // Solution by Jannatul Fardouse
 
+ /*---code start------
             #include <iostream>
-            #include "Sales_item.h"
-            
-            /**
-                    Reads a set of Sales_item's and echos back each entry. Return 0 upon correct program exit
-             **/
-            
+            #include "Sales_item.h"           //Reads a set of Sales_item's and echos back each entry. Return 0 upon correct program exit
             int main() {
                 Sales_item si;
                 while(std::cin >> si) {
-                    std::cout << si << std::endl;
+                   std::cout << si << std::endl;
                 }
                         
                 return 0;
             }
+            
+            ----code end----*/
 
 /*****
         The provided program is designed to read a set of book sales transactions and write each transaction to the standard output.
