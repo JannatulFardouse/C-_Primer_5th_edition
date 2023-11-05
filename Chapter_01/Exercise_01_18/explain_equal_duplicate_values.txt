@@ -11,7 +11,7 @@ Let's see how the program behaves in both scenarios:
 
 Scenario 1: Equal Values as Input:
 
-        If you provide equal values as input,
+        If we provide equal values as input,
         such as all "42," the program will count the consecutive occurrences of that value.
         The program should correctly report the count for the equal values. For example:
                                 $ ./jannatul_program
@@ -22,7 +22,7 @@ Scenario 1: Equal Values as Input:
 
 Scenario 2: No Repeated Values as Input:
 
-        If you provide values in which no number is repeated and each value is unique,
+        If we provide values in which no number is repeated and each value is unique,
         such as "1 2 3 4 5," the program will still work correctly.
         It will report the count for each distinct value in the order they appear. For example:
 
@@ -38,7 +38,3 @@ Scenario 2: No Repeated Values as Input:
 
 The program is designed to handle both scenarios, and it will function as expected in each case,
 counting and reporting the occurrences of the values provided in the input.
-
-
-
-
