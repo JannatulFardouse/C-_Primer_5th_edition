@@ -1,0 +1,44 @@
+/*--
+    Exercise 1.18: Compile and run the program from this section giving it only equal
+values as input. Run it again giving it values in which no number is repeated
+--*/
+
+//Solution By Jannatul Fardouse
+
+Exercise 1.18 requires to compile and run the program from the provided section,
+first with equal values as input and then with values in which no number is repeated.
+Let's see how the program behaves in both scenarios:
+
+Scenario 1: Equal Values as Input:
+
+        If you provide equal values as input,
+        such as all "42," the program will count the consecutive occurrences of that value.
+        The program should correctly report the count for the equal values. For example:
+                                $ ./jannatul_program
+                                42 42 42 42 42 42
+
+                                Output:
+                                42 occurs 6 times
+
+Scenario 2: No Repeated Values as Input:
+
+        If you provide values in which no number is repeated and each value is unique,
+        such as "1 2 3 4 5," the program will still work correctly.
+        It will report the count for each distinct value in the order they appear. For example:
+
+                                $ ./Jannatul_program
+                                1 2 3 4 5
+
+                                Output:
+                                1 occurs 1 times
+                                2 occurs 1 times
+                                3 occurs 1 times
+                                4 occurs 1 times
+                                5 occurs 1 times
+
+The program is designed to handle both scenarios, and it will function as expected in each case,
+counting and reporting the occurrences of the values provided in the input.
+
+
+
+
