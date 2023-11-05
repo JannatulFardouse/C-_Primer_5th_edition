@@ -1,0 +1,28 @@
+/*--
+Exercise 1.17: What happens in the program presented in this section if the input values are all equal?
+What if there are no duplicated values?
+--*/
+
+//Solution by Jannatul Fardouse
+
+In the program this section provided, which counts how many consecutive times each distinct value appears in the input,
+the behavior will be as follows based on the input:
+
+If the input values are all equal:
+
+            If all the input values are equal, let's say all are 42, 
+            then the program will correctly count how many times the value 42 appears consecutively.
+            The output will show that 42 occurs 11 times (assuming there are 11 consecutive 42s).
+
+If there are no duplicated values:
+
+            If there are no duplicated values and each value in the input is unique, the program will still work correctly.
+            It will print the count of each distinct value in the order they appear in the input.
+            For example, if the input is 1 2 3 4 5, the program will output:
+                                            1 occurs 1 times
+                                            2 occurs 1 times
+                                            3 occurs 1 times
+                                            4 occurs 1 times
+                                            5 occurs 1 times
+The program is designed to handle both scenarios, whether there are repeated values or not. 
+It counts the consecutive occurrences of each distinct value and reports the count for each distinct value encountered in the input.
