@@ -1,0 +1,42 @@
+/*--
+    Exercise 2.2: To calculate a mortgage payment, what types would you use for the rate,
+principal, and payment? Explain why you selected each type.
+--*/
+
+//Solution by Jannatul Fardouse
+
+To calculate a mortgage payment, we would typically use the following data types for the rate, principal, and payment:
+
+Rate (Interest Rate):
+
+The interest rate is typically represented as a decimal or percentage, and it may have fractional parts. 
+For representing interest rates, you should use a data type that can handle decimal numbers with precision. 
+The most appropriate data type for the interest rate is double. Using a floating-point type like double allows us to represent rates 
+like 4.25% accurately (as 0.0425) while still providing sufficient precision for calculations.
+
+Example:
+
+            double interestRate = 0.0425; // 4.25%
+
+Principal (Loan Amount):
+
+The principal amount is the initial loan amount borrowed and is typically represented as a positive numeric value. 
+The principal is often expressed as a large whole number, and it should not have fractional parts. For representing the principal,
+we can use an integer data type like long long to ensure it can handle large loan amounts.
+
+Example:
+            long long principalAmount = 200000; // $200,000
+
+Payment (Monthly Payment):
+
+The monthly payment is the amount to be paid each month, including both principal and interest. 
+It can be a decimal value, and it's typically represented with two decimal places for precision. For representing the payment amount, 
+we should use the double data type to handle decimal values accurately.
+
+Example:
+
+            double monthlyPayment = 1500.75; // $1,500.75
+Using double for the rate and payment ensures that we can accurately handle decimal values and precision, 
+which is crucial for financial calculations like mortgage payments.
+
+Using long long for the principal allows us to represent large loan amounts without losing precision due to integer truncation.
