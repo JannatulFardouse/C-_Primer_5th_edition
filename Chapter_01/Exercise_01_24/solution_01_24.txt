@@ -1,0 +1,30 @@
+/*--
+    Exercise 1.24: Test the previous program by giving multiple transactions representing
+multiple ISBNs. The records for each ISBN should be grouped together.
+--*/
+
+//Solution by Jannatul Fardouse
+
+    To test the program from Exercise 1.23 by giving multiple transactions representing multiple ISBNs, 
+    we can input a series of transactions with various ISBNs. The program will count and group the records for each unique ISBN together. 
+    Here's an example of how you can test the program:
+
+                Enter transactions in the format (ISBN units-sold price), separated by spaces:
+                978-034537570,3,20.00
+                978-0553380958,2,25.00
+                978-034537570,1,20.00
+                978-0312991462,4,15.00
+                978-0312956635,2,18.00
+                978-0553380958,3,25.00
+    In this example, we are entering multiple transactions with different ISBNs. 
+    The program will group the records for each unique ISBN together and count how many times each ISBN appears.
+
+    The expected output might look something like this:
+                ISBN: 978-0312956635 Count: 1
+                ISBN: 978-0312991462 Count: 1
+                ISBN: 978-034537570 Count: 2
+                ISBN: 978-0553380958 Count: 2
+
+    The program groups the records for each unique ISBN and displays the counts accordingly.
+    It's essential to ensure that the ISBNs are correctly formatted and that the transactions are provided in the specified format
+    (ISBN, units sold, price) for the program to work correctly.
