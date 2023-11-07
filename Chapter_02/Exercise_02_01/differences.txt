@@ -1,0 +1,44 @@
+/*--
+    Exercise 2.1: What are the differences between int, long, long long, and short?
+    Between an unsigned and a signed type? Between a float and a double?
+--*/
+
+// Solution by Jannatul Fardouse
+    Here are the differences between various data types in C++:
+
+***int, long, long long, and short:
+
+        int is a signed integer type that typically uses 4 bytes to store values.
+
+        long is a signed integer type that uses at least as many bytes as an int (usually 4 bytes or more, depending on the platform).
+
+        long long is a signed integer type that is guaranteed to be at least 8 bytes, capable of storing very large integers.
+
+        short is a signed integer type that uses fewer bytes than an int (usually 2 bytes), 
+        suitable for saving memory when a smaller range is sufficient.
+
+        The key difference between these types is the amount of memory they use and the range of values they can represent. 
+        The larger the data type, the larger the range of values it can store.
+
+***Unsigned vs. Signed Types:
+
+        Unsigned types (e.g., unsigned int) can store only non-negative values (zero and positive numbers).
+
+        They provide a larger positive range at the expense of not being able to store negative values.
+
+        Signed types (e.g., int, long, long long, short) can store both positive and negative values, 
+        splitting the range between positive and negative values. They use one bit to represent the sign (positive or negative).
+
+***float vs. double:
+
+        float is a single-precision floating-point type, typically using 4 bytes.
+        It is suitable for most floating-point calculations but has limited precision.
+
+        double is a double-precision floating-point type, typically using 8 bytes. 
+        It provides greater precision and can represent a wider range of floating-point values.
+
+        The key difference is the precision and range of values that can be represented.
+        Double is typically used for most floating-point calculations due to its higher precision.
+
+    In summary, the choice of data type depends on the range and precision of values you need to represent. 
+    Using the right data type ensures efficient memory usage and accurate calculations in your programs.
