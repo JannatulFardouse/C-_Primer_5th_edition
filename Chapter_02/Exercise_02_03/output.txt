@@ -1,0 +1,37 @@
+/*--
+    Exercise 2.3: What output will the following code produce?
+    unsigned u = 10, u2 = 42;
+    std::cout << u2 - u << std::endl;
+    std::cout << u - u2 << std::endl;
+    int i = 10, i2 = 42;
+    std::cout << i2 - i << std::endl;
+    std::cout << i - i2 << std::endl;
+    std::cout << i - u << std::endl;
+    std::cout << u - i << std::endl;
+--*/
+
+// Solution by Jannatul Fardouse
+
+    Let's break down the code and evaluate each expression:
+
+            unsigned u = 10, u2 = 42;
+            std::cout << u2 - u << std::endl;  // 42 - 10 = 32
+            std::cout << u - u2 << std::endl;  // Unsigned subtraction, result wraps around: 10 - 42 = a very large positive number
+
+            int i = 10, i2 = 42;
+            std::cout << i2 - i << std::endl;  // 42 - 10 = 32
+            std::cout << i - i2 << std::endl;  // 10 - 42 = -32, signed subtraction
+
+            std::cout << i - u << std::endl;   // 10 - 10 = 0, no conversion, both are of type int
+            std::cout << u - i << std::endl;   // Unsigned subtraction, result wraps around: 10 - 10 = 0
+
+    So, the output will be:
+
+            32
+            4294967264   // This is a very large positive number due to unsigned subtraction wrapping around
+
+            32
+            -32
+            
+            0
+            0            // Unsigned subtraction, result wraps around: 10 - 10 = 0
