@@ -1,0 +1,55 @@
+/*--
+    Exercise 2.5: Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
+                (a) ’a’, L’a’, "a", L"a"
+                (b) 10, 10u, 10L, 10uL, 012, 0xC
+                (c) 3.14, 3.14f, 3.14L
+                (d) 10, 10u, 10., 10e-2
+--*/
+
+// Solution by Jannatul Fardouse
+
+       Let's break down each example:
+
+        (a) Character literals:
+
+            'a': type char
+            L'a': type wchar_t
+            "a": type array of const char
+            L"a": type array of const wchar_t
+
+        Explanation: The single quotes indicate character literals, and the "L" prefix indicates wide character literals.
+        Double quotes indicate string literals (arrays of characters).
+
+        (b) Integer literals:
+
+            10: type int
+            10u: type unsigned int
+            10L: type long
+            10uL: type unsigned long
+            012: type int (octal representation)
+            0xC: type int (hexadecimal representation)
+
+        Explanation: The absence of any suffix implies the literal is of type int.
+        Adding 'u' makes it unsigned, 'L' makes it long, and using octal or hexadecimal notation affects the base.
+
+        (c) Floating-point literals:
+
+            3.14: type double
+            3.14f: type float
+            3.14L: type long double
+
+        Explanation: The presence of 'f' makes the literal a float, and 'L' makes it a long double.
+        Without any suffix, it is considered a double.
+
+        (d) Mixed literals:
+
+            10: type int
+            10u: type unsigned int
+            10.: type double
+            10e-2: type double
+
+        Explanation: The absence of any suffix implies the literal is of type int. Adding 'u' makes it unsigned,
+        and the presence of a decimal point or 'e' makes it a floating-point literal.
+
+    In summary, the type of a literal is influenced by its syntax, suffixes, or prefixes,
+    and the absence of any of these defaults to the most common type for that kind of literal.
