@@ -1,0 +1,29 @@
+/*--
+    Exercise 2.6: What, if any, are the differences between the following definitions:
+            int month = 9, day = 7;
+            int month = 09, day = 07;
+--*/
+
+// Solution by Jannatul Fardouse
+
+    The differences between the two definitions are related to the number representations used:
+
+                    int month = 9, day = 7;
+
+    In this case, 9 and 7 are decimal (base 10) integers.
+    The leading zeros are not used, as integers in C++ are typically written in decimal format.
+    The values assigned to month and day are 9 and 7, respectively.
+
+                    int month = 09, day = 07;
+
+    In this case, 09 and 07 are treated as octal (base 8) integers because of the leading zeros.
+    In octal notation, valid digits are 0 to 7.
+    However, the use of '9' in octal is not valid. So, the compiler will likely produce an error.
+
+    To correct the second definition, we should use valid octal digits:
+
+
+                    int month = 011;  // octal 11 is decimal 9
+                    int day = 07;     // octal 7 is decimal 7
+                    
+    So, the corrected version ensures that valid octal representations are used, and month is assigned the decimal value 9.
