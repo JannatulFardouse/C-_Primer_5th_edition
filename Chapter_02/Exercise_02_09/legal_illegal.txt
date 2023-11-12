@@ -1,0 +1,47 @@
+/*--
+    Exercise 2.9: Explain the following definitions. For those that are illegal, explain
+    what’s wrong and how to correct it.
+            (a) std::cin >> int input_value; (b) int i = { 3.14 };
+            (c) double salary = wage = 9999.99; (d) int i = 3.14;
+--*/
+
+// Solution by Jannatul Fardouse
+
+            (a) std::cin >> int input_value;
+
+    This is illegal. It seems like an attempt to declare a variable named input_value of type int and use std::cin to read a value into it.
+    However, the syntax is incorrect.
+    To correct it, declare the variable separately:
+
+                int input_value;
+                std::cin >> input_value;
+
+            (b) int i = { 3.14 };
+
+    This is legal but with a narrowing conversion warning.
+    It initializes an integer i with a floating-point value, which might lose information.
+    To avoid the warning, use direct initialization:
+
+                int i = 3.14;
+
+            (c) double salary = wage = 9999.99;
+
+    This is illegal because it is attempting to use an uninitialized variable wage to initialize salary.
+    To correct it, declare and initialize wage separately:
+
+                double wage = 9999.99;
+                double salary = wage;
+
+            (d) int i = 3.14;
+
+    This is legal but with a narrowing conversion warning. It initializes an integer i with a floating-point value.
+    To avoid the warning, use direct initialization:
+
+                int i = 3.14;
+
+    In summary:
+
+            (a) Incorrect syntax for declaring and reading from std::cin.
+            (b) Legal but with a narrowing conversion warning.
+            (c) Illegal due to using an uninitialized variable for initialization.
+            (d) Legal but with a narrowing conversion warning.
