@@ -1,0 +1,40 @@
+/*--
+    Exercise 2.10: What are the initial values, if any, of each of the following variables?
+
+                    std::string global_str;
+
+                    int global_int;
+
+                    int main()
+                    {
+                        int local_int;
+                        std::string local_str;
+                    }
+--*/
+
+// Solution by Jannatul Fardouse
+
+    In C++, the initial values of variables depend on their storage duration and type:
+
+        global_str (global variable of type std::string):
+    
+            The default constructor of std::string will be called, initializing global_str to an empty string.
+    
+        global_int (global variable of type int):
+    
+            It will be initialized to zero because it has static storage duration.
+    
+        local_int (local variable of type int inside main() function):
+    
+            Its initial value is indeterminate (undefined). Local variables without explicit initialization have unpredictable values.
+    
+        local_str (local variable of type std::string inside main() function):
+    
+            The default constructor of std::string will be called, initializing local_str to an empty string.
+    
+    To summarize:
+
+        global_str: Empty string.
+        global_int: Zero.
+        local_int: Undefined (garbage value).
+        local_str: Empty string.
