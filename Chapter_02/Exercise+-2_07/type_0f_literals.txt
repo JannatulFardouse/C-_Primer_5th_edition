@@ -1,0 +1,39 @@
+/*-
+    Exercise 2.7: What values do these literals represent? What type does each have?
+                (a) "Who goes with F\145rgus?\012"
+                (b) 3.14e1L (c) 1024f (d) 3.14L
+--*/
+
+// Solution by Jannatul Fardouse
+
+    Let's break down each literal:
+
+                (a) "Who goes with F\145rgus?\012"
+
+    This string literal represents the following text: "Who goes with Fergus?" followed by a newline character '\n'.
+    The escape sequences are interpreted:
+    '\145' represents the octal value 145, which is the ASCII code for the lowercase 'e'.
+    '\012' represents the octal value 12, which is the ASCII code for the newline character '\n'.
+    Type: Array of 'const char'.
+
+                (b) 3.14e1L
+
+    This floating-point literal represents the value of 3.14×10^1, which is 31.4
+    Type: 'long double'.
+
+                (c) 1024f
+
+    This floating-point literal represents the value of 1024 as a float.
+    Type: 'float'.
+
+                (d) 3.14L
+
+    This floating-point literal represents the value of 3.14 as a long double.
+    Type: 'long double'.
+
+    In summary:
+
+                (a) "Who goes with F\145rgus?\012" is a string literal.
+                (b) 3.14e1L is a long double literal.
+                (c) 1024f is a float literal.
+                (d) 3.14L is a long double literal.
