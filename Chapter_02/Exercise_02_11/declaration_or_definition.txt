@@ -20,7 +20,7 @@
 
     (c) extern int iz;
     This is a declaration.
-    It declares an extern integer variable iz without providing an initializer.
+    It declares an extern integer variable 'iz' without providing an initializer.
     The extern keyword indicates that the variable is declared, 
     and its definition is expected to be provided elsewhere (possibly in another translation unit).
 
