@@ -1,0 +1,31 @@
+/*
+    Exercise 2.11: Explain whether each of the following is a declaration or a definition:
+            (a) extern int ix = 1024;
+            (b) int iy;
+            (c) extern int iz;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    (a) extern int ix = 1024;
+    This is a definition.
+    It declares an "extern" integar variable 'ix' and initializes it with the value '1024'.
+    The "extern" keyword is typecally used for declaration, but in this context, it also provides a definition with an initializer.
+
+    (b) int iy;
+    This is a definition.
+    It declares an integar variable 'iy' without providing an explicit initializer.
+    The variable is defined and allocated storage, and its initial value is undefined (garbage value).
+
+    (c) extern int iz;
+    This is a declaration.
+    It declares an extern integer variable iz without providing an initializer.
+    The extern keyword indicates that the variable is declared, 
+    and its definition is expected to be provided elsewhere (possibly in another translation unit).
+
+
+    In summary:
+        (a) Definition.
+        (b) Definition.
+        (c) Declaration.
