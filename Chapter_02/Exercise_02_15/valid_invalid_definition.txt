@@ -1,0 +1,27 @@
+/*
+    Exercise 2.15: Which of the following definitions, if any, are invalid? Why?
+        (a) int ival = 1.01;        (b) int &rval1 = 1.01;
+        (c) int &rval2 = ival;      (d) int &rval3;
+*/
+
+// Solution by Jannatul Fardouse
+
+        (a) int ival = 1.01;
+            Valid. It initializes an integer variable 'ival' with the value '1.01'. The value will be truncated to '1'.
+
+        (b) int &rval1 = 1.01;
+            Invalid. You cannot bind a non-const reference ('rval1') to a temporary (literal value '1.01').
+            we need a const reference for this.
+
+        (c) int &rval2 = ival;
+            Valid. It initializes a reference 'rval2' to refer to the variable 'ival'. The reference will act as an alias for 'ival'.
+
+        (d) int &rval3;
+            Invalid. A reference must be initialized when declared. This declaration lacks an initialization, making it invalid.
+        
+        In summary:
+
+                (a) Valid.
+                (b) Invalid (non-const reference to a temporary).
+                (c) Valid.
+                (d) Invalid (reference without initialization).
