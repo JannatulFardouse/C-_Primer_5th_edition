@@ -1,0 +1,24 @@
+/*
+    Exercise 2.20: What does the following program do?
+                int i = 42;
+                int *p1 = &i;
+                *p1 = *p1 * *p1;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's break down the provided code:
+
+        1. int i = 42;: Declares an integer variable 'i' and initializes it with the value '42'.
+        
+        2. int *p1 = &i;: Declares a pointer to an integer 'p1' and initializes it with the address of 'i'.
+        
+        3. *p1 = *p1 * *p1;: Dereferences 'p1', retrieves the value stored at the address it points to (which is the value of 'i'),
+             multiplies it by itself, and assigns the result back to the memory location pointed to by 'p1' (which is 'i').
+
+    After this code segment, the value of 'i' is modified. 
+    The final value of 'i' is the result of squaring its original value ('42 * 42 = 1764').
+    The pointer 'p1' is used to indirectly modify the value of 'i' through its memory address.
+
+    So, after this code segment, the value of 'i' will be '1764'.
