@@ -1,0 +1,30 @@
+/*
+    Exercise 2.17: What does the following code print?
+            int i, &ri = i;
+            i = 5; ri = 10;
+            std::cout << i << " " << ri << std::endl;
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's break down the code:
+
+                int i, &ri = i;
+                i = 5; ri = 10;
+                std::cout << i << " " << ri << std::endl;
+
+            int i, &ri = i;
+            : Declares an integer 'i' and a reference 'ri' that refers to 'i'.
+
+            i = 5;
+            : Assigns the value '5' to 'i'.
+
+            ri = 10;
+            : Since 'ri' is a reference to 'i', this assignment sets the value of 'i' to '10'.
+
+            std::cout << i << " " << ri << std::endl;
+            : Prints the values of 'i' and 'ri'.
+
+    After the assignments, both 'i' and 'ri' have the value '10'. 
+    
+    So, the output of the program will be: 10 10
