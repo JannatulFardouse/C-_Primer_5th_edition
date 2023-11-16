@@ -1,0 +1,33 @@
+/*
+    Exercise 2.16: Which, if any, of the following assignments are invalid? If they are
+    valid, explain what they do.
+
+            int i = 0,      &r1 = i; 
+            double d = 0,   &r2 = d;
+            
+            (a) r2 = 3.14159;       (b) r2 = r1;
+            (c) i = r2;             (d) r1 = d;
+*/      
+
+// Solution by Jannatul Fardouse
+
+    (a) r2 = 3.14159;
+        Valid. It assigns the value '3.14159' to the variable 'd' through the reference 'r2'.
+
+    (b)r2 = r1;
+        Valid. It assigns the value of 'i' to 'd' through the reference 'r2'. Since 'r1' is a reference to 'i',
+        it copies the value of 'i' into 'd'.
+
+    (c) i = r2;
+        Valid. It assigns the value of 'd' to 'i'. The assignment copies the value from 'd' (through the reference 'r2') into 'i'.
+
+    (d) r1 = d;
+        Valid. It assigns the value of 'd' to 'i' through the reference 'r1'. Since 'r1' is a reference to 'i',
+        it copies the value of 'd' into 'i'.
+
+    In summary:
+
+            (a) Assigns a double value to 'd' through the reference 'r2'.
+            (b) Assigns the value of 'i' to 'd' through the reference 'r2'.
+            (c) Assigns the value of 'd' to 'i'.
+            (d) Assigns the value of 'd' to 'i' through the reference 'r1'.
