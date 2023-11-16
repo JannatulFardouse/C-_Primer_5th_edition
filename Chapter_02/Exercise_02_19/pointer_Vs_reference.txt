@@ -1,0 +1,58 @@
+/*
+    Exercise 2.19: Explain the key differences between pointers and references.
+*/
+
+// Solution by Jannatul Fardouse
+
+    Pointers and references are both used to work with the memory and addresses of variables, but they have key differences:
+
+        1. Syntax and Initialization:
+                Pointers: A pointer is a variable that stores the memory address of another variable.
+                It is declared using the '*' symbol. Initialization can be done later, and it can be set 
+                to 'nullptr' (null pointer) to indicate that it does not point to any valid memory address.
+                    
+                    int* ptr = nullptr; // Declaration and initialization
+
+                References: A reference is an alias or an alternative name for an existing variable.
+                It must be initialized when declared and cannot be later changed to refer to a different variable.
+
+                    int x = 42;
+                    int& ref = x; // Declaration and initialization
+
+        2. Memory Address Manipulation:
+                Pointers: Pointers allow direct manipulation of memory addresses and arithmetic operations (pointer arithmetic).
+
+                References: References automatically handle memory addresses; you cannot directly manipulate the address of a reference.
+        
+        3. Null Values:
+                Pointers: Pointers can be set to 'nullptr' to indicate they are not pointing to any valid memory.
+                
+                References: References must always refer to a valid object and cannot be 'nullptr'.
+
+        4. Reassignment:
+                Pointers: Pointers can be reassigned to point to different memory locations.    
+
+                References: References cannot be reassigned to refer to a different variable after initialization.
+
+        5. Dereferencing:
+                Pointers: To access the value a pointer points to, you use the dereference operator ('*').
+
+                    int value = *ptr; // Dereferencing
+
+                References: Accessing the value of a reference is done directly; there is no need for a dereference operator.
+
+                    int value = ref; // No dereference needed
+
+        6. Pointer Arithmetic:
+                Pointers: Pointers can be incremented and decremented to navigate through an array or a block of memory.
+
+                References: References do not support arithmetic operations like pointers.
+
+        7. Function Arguments:
+                Pointers: Pointers can be used to pass the address of variables to functions for modification (pass-by-reference).
+
+                References: References can also be used for pass-by-reference in function parameters.
+
+    In summary, while both pointers and references provide a way to work with the memory of variables, 
+    pointers offer more flexibility in terms of address manipulation and reassignment, 
+    whereas references provide a simpler syntax and guarantee that they always refer to a valid object.
