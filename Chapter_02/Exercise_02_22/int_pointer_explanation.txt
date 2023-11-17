@@ -1,0 +1,17 @@
+/*
+    Exercise 2.22: Assuming p is a pointer to int, explain the following code:
+                    if (p) // ...
+                    if (*p) // ...
+*/
+
+// Solution by Jannatul Fardouse
+
+    Explanation:
+
+            1. 'if (p)': This condition checks if the pointer 'p' is not a null pointer. If 'p' points to a valid memory location, 
+        the condition evaluates to true, and the corresponding block is executed.
+
+            2. 'if (*p)': This condition checks if the value pointed to by 'p' is not zero. If 'p' points to a valid memory location, 
+        and the integer value at that location is non-zero, the condition evaluates to true, and the corresponding block is executed. 
+        If 'p' is a null pointer or points to a memory location containing the value zero, the condition is false.
+        
