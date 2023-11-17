@@ -1,0 +1,39 @@
+/*
+    Exercise 2.28: Explain the following definitions. Identify any that are illegal.
+        (a) int i, *const cp;           (b) int *p1, *const p2;
+        (c) const int ic, &r = ic;      (d) const int *const p3;
+        (e) const int *p;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze each definition:
+        
+        (a) int i, *const cp;
+        Illegal.' *const cp' is a constant pointer, but it must be initialized at the time of declaration. It lacks initialization.
+       
+        (b) int *p1, *const p2; 
+        Illegal. Similar to (a), '*const p2' is a constant pointer and must be initialized at the time of declaration.
+        
+        (c) const int ic, &r = ic;
+        Illegal. 'const int ic' is a constant integer and must be initialized at the time of declaration.
+        
+        (d) const int *const p3;
+        Illegal. Similar to (a) and (b), '*const p3' is a constant pointer, and it must be initialized at the time of declaration.
+        
+        (e) const int *p;
+        Legal. 'p' is a pointer to a constant integer.
+
+        Corrected versions:
+            (a) int i, *const cp = nullptr;         // Legal, initializing constant pointer
+            (b) int *p1, *const p2 = nullptr;       // Legal, initializing constant pointer
+            (c) const int ic = 0, &r = ic;          // Legal, initializing constant integer and reference
+            (d) const int *const p3 = nullptr;      // Legal, initializing constant pointer to constant integer
+
+        The corrected versions initialize the constant pointers and constant variables appropriately.
+
+        
+
+
+
