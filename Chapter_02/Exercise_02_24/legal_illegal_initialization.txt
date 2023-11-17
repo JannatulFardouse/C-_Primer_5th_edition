@@ -1,0 +1,18 @@
+/*
+    Exercise 2.24: Why is the initialization of p legal but that of lp illegal?
+            int i = 42; 
+            void *p = &i; 
+            long *lp = &i;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+The initialization of 'p' is legal because 'p' is a void pointer ('void*'), 
+which is a generic pointer type that can hold the address of any data type. 
+Therefore, it can be used to store the address of an int variable 'i' without a type mismatch.
+
+On the other hand, the initialization of 'lp' is illegal because 'lp' is declared as a pointer to 'long' ('long*'), 
+but it is being assigned the address of an int variable 'i'. Mixing different pointer types in this way violates type safety rules.
+Assigning the address of an int to a 'long*' pointer may lead to incorrect memory access and undefined behavior.
+
