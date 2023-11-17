@@ -1,0 +1,24 @@
+/*
+    Exercise 2.21: Explain each of the following definitions. Indicate whether any are illegal and, if so, why.
+                    int i = 0;
+                    (a) double* dp = &i;    (b) int *ip = i;      (c) int *p = &i;
+
+*/
+
+//solution by Jannatul Fardouse
+
+    Let's analyze each definition:
+
+        (a) double* dp = &i;
+        This is legal but potentially problematic.
+        It declares a pointer to a double ('dp') and initializes it with the address of an integer variable ('i').
+        While the compiler allows it, it can lead to issues because it's generally not safe to treat the address of an 'int' 
+        as the address of a 'double'.
+
+        (b) int *ip = i;
+        This is illegal. It attempts to initialize a pointer to an integer ('ip') with the value of an integer ('i'). 
+        To correct it, the right-hand side should be the address of 'i': 'int *ip = &i;'.
+
+        (c) int *p = &i;
+        This is legal. It declares a pointer to an integer ('p') and initializes it with the address of an integer variable ('i').
+
