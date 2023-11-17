@@ -1,0 +1,50 @@
+/*
+    Exercise 2.25: Determine the types and values of each of the following variables.
+            (a) int* ip, i, &r = i; 
+            (b) int i, *ip = 0; 
+            (c) int* ip, ip2;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze each variable declaration:
+
+        (a) int* ip, i, &r = i;
+            'ip': Pointer to an integer ('int*').
+            'i': Integer.
+            'r': Reference to an integer (i'nt&'), initialized to reference 'i'.
+
+        (b) int i, *ip = 0;
+            'i': Integer.
+            'ip': Pointer to an integer ('int*'), initialized to a null pointer ('0').
+
+        (c) int* ip, ip2;
+            'ip': Pointer to an integer ('int*').
+            'ip2': Integer, not a pointer.
+
+    Values:
+    The values of the variables depend on their usage and initialization in the program.
+    
+    Example usage:
+
+        int main() {
+    int i = 5;
+    int* ip = &i;   // ip points to the address of i
+    int& r = i;     // r is a reference to i
+
+    int* ip2 = nullptr; // ip2 is initialized as a null pointer
+
+    // Usage of variables
+    *ip = 10;   // i is now 10 through the pointer ip
+    r = 7;      // i is now 7 through the reference r
+
+    // ip2 does not point to any specific memory location (uninitialized)
+
+    return 0;
+    }
+
+    Always remember that the values of variables can change during the execution of the program based on assignments and other operations.
+
+
+    
