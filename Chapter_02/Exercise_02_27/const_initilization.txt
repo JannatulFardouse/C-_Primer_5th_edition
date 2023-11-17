@@ -1,0 +1,45 @@
+/*
+    Exercise 2.27: Which of the following initializations are legal? Explain why.
+
+            (a) int i = -1, &r = 0; (b) int *const p2 = &i2;
+            (c) const int i = -1, &r = 0; (d) const int *const p3 = &i2;
+            (e) const int *p1 = &i2; (f) const int &const r2;
+            (g) const int i2 = i, &r = i;
+*/
+
+// Solution by Jannatul Fardouse
+
+Let's analyze each initialization:
+
+
+        (a) int i = -1, &r = 0;
+        Illegal. We cannot bind a non-const reference ('r') to a literal constant ('0').
+
+        (b) int *const p2 = &i2;
+        Legal. 'p2' is a constant pointer to an integer, initialized with the address of 'i2'.
+
+        (c) const int i = -1, &r = 0;
+        Legal. 'i' is a constant integer initialized with '-1', and 'r' is a constant reference initialized with the literal constant '0'.
+
+        (d) const int *const p3 = &i2;
+        Legal. 'p3' is a constant pointer to a constant integer, initialized with the address of 'i2'.
+
+        (e) const int *p1 = &i2;
+        Legal. 'p1' is a pointer to a constant integer, initialized with the address of 'i2'.
+
+        (f) const int &const r2;
+        Illegal. References cannot be declared as 'const'. Once a reference is initialized, it cannot be rebound to refer to another object.
+
+        (g) const int i2 = i, &r = i;
+        Legal. 'i2' is a constant integer initialized with the value of 'i', and 'r' is a constant reference initialized with the value of 'i'.
+    
+    Corrected summary:
+
+                    (a) Illegal
+                    (b) Legal
+                    (c) Legal
+                    (d) Legal
+                    (e) Legal
+                    (f) Illegal
+                    (g) Legal
+

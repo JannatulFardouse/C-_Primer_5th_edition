@@ -27,7 +27,7 @@
         Corrected version of (a):
                     const int buf = 0; // Legal, initializing const variable
 
-        Corrected summary:
+        Corrected summary:+
 
                     (a) const int buf = 0;
                     (b) int cnt = 0;
