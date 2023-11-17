@@ -1,0 +1,37 @@
+/*
+    Exercise 2.26: Which of the following are legal? For those that are illegal, explain why.
+
+        (a) const int buf;          (b) int cnt = 0;
+        (c) const int sz = cnt;     (d) ++cnt; ++sz;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze each statement:
+
+        (a) const int buf;
+        Illegal. A 'const' variable must be initialized at the time of declaration. Here, 'buf' is declared as 'const' but not initialized.
+
+        (b) int cnt = 0;
+        Legal. 'cnt' is declared as an integer and initialized with the value '0'.
+
+        (c) const int sz = cnt;
+        Legal. 'sz' is declared as a 'const' integer and initialized with the value of 'cnt'.
+
+        (d) ++cnt; ++sz;
+        Legal for '++cnt' but illegal for '++sz'. 'sz' is declared as a 'const' variable, 
+        which means its value cannot be modified after initialization. 
+        Attempting to increment 'sz' will result in a compilation error.
+
+        Corrected version of (a):
+                    const int buf = 0; // Legal, initializing const variable
+
+        Corrected summary:
+
+                    (a) const int buf = 0;
+                    (b) int cnt = 0;
+                    (c) const int sz = cnt;
+                    (d) ++cnt; // Legal / ++sz; // Illegal
+
+                    
