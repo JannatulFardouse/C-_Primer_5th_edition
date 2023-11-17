@@ -1,0 +1,13 @@
+/*
+    Exercise 2.23: Given a pointer p, can you determine whether p points to a valid object?
+    If so, how? If not, why not?
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    The validity of whether a pointer p points to a valid object cannot be reliably determined, especially when it is uninitialized. 
+    In most compilers, when an uninitialized pointer is used, the bits present at the memory location associated with p are treated as 
+    an address. This behavior is undefined, emphasizing the importance of initializing pointers before use to ensure predictable and 
+    safe behavior.
+    
