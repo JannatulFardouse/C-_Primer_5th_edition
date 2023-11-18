@@ -1,0 +1,26 @@
+/*
+    Exercise 2.40: Write your own version of the Sales_data class.
+*/
+
+// Solution by Jannatul Fardouse
+
+    Here's a basic version of the 'Sales_data' class:
+
+                #include <iostream>
+                #include <string>
+
+                struct Sales_data {
+                    std::string bookNo;
+                    unsigned unitsSold = 0;
+                    double revenue = 0.0;
+                };
+
+    This simple 'Sales_data' class includes three members: 'bookNo' to store the book number or identifier,
+    'unitsSold' to store the number of units sold, 
+    and 'revenue' to store the total revenue. 
+    The 'unitsSold' and 'revenue' members are initialized to '0' and '0.0', respectively.
+
+    Feel free to enhance or modify this class based on your specific requirements or the features you want to include.
+
+
+    
