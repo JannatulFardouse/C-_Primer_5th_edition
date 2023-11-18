@@ -1,0 +1,28 @@
+/*
+    Exercise 2.37: Assignment is an example of an expression that yields a reference type.
+    The type is a reference to the type of the left-hand operand. That is, if i is an int, then
+    the type of the expression i=x is int&. Using that knowledge, determine the type
+    and value of each variable in this code:
+                int a = 3, b = 4;
+                decltype(a) c = a;
+                decltype(a = b) d = a;
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze the code:
+
+                int a = 3, b = 4;
+                decltype(a) c = a;
+                decltype(a = b) d = a;
+
+            'decltype(a) c = a;': The type of 'c' is 'int', and its value is '3'.
+            'decltype(a = b) d = a;': The type of 'd' is 'int&' because assignment expressions yield a reference type. 
+            Its value is '3' since 'a' was assigned the value of 'b' in the expression.
+
+    So, after the code finishes:
+
+                The value of 'a' remains '3'.
+                The value of 'b' is '4'.
+                The value of 'c' is '3'.
+                The value of 'd' is '3'.
