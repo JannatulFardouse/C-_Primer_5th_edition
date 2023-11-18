@@ -1,0 +1,43 @@
+/*
+    Exercise 2.34: Write a program containing the variables and assignments from the previous exercise.
+    Print the variables before and after the assignments to check whether your predictions in the previous exercise were correct.
+    If not, study the examples until you can convince yourself you know what led you to the wrong conclusion.
+
+*/
+
+// Solution by Jannatul Fardouse
+
+     There is a simple C++ program that declares variables and performs the assignments as in Exercise 2.33.
+     It then prints the variables before and after the assignments:
+    
+                 #include <iostream>
+
+                int main() {
+                    int a, b, c, d, e, g;
+
+                    // Print variables before assignments
+                    std::cout << "Before Assignments:" << std::endl;
+                    std::cout << "a: " << a << "  b: " << b << "  c: " << c << std::endl;
+                    std::cout << "d: " << d << "  e: " << e << "  g: " << g << std::endl;
+
+                    // Perform assignments
+                    a = 42;
+                    b = 42;
+                    c = 42;
+                    d = 42;
+                    e = 42;
+                    g = 42;
+
+                    // Print variables after assignments
+                    std::cout << "\nAfter Assignments:" << std::endl;
+                    std::cout << "a: " << a << "  b: " << b << "  c: " << c << std::endl;
+                    std::cout << "d: " << d << "  e: " << e << "  g: " << g << std::endl;
+
+                    return 0;
+                }
+
+    This program declares the variables, prints their initial values, performs the assignments, 
+    and then prints their values after the assignments.
+    We can run this program to verify the results and compare them with your predictions.
+
+    
