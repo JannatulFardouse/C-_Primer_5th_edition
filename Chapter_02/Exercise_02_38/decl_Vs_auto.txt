@@ -1,0 +1,49 @@
+/*
+    Exercise 2.38: Describe the differences in type deduction between decltype and auto.
+    Give an example of an expression where auto and decltype will deduce the same type and
+    an example where they will deduce differing types.
+*/
+
+// Solution by Jannatul Fardouse
+
+    'decltype' and 'auto' are both used for type deduction, but they have some differences:
+
+    1. decltype:
+
+        Deduces the type of an expression at compile time.
+        Can be used to deduce the type of an expression without evaluating it.
+        Preserves top-level const and references.
+        Useful when you want the type of an expression without changing it.
+
+    2. auto:
+
+        Deduces the type of an expression at compile time.
+        Requires an initializer to deduce the type.
+        Does not preserve top-level const or references.
+        Useful when we want the type of an expression and might want to modify it.
+    
+    Examples:
+
+    Same Type Deduction:
+
+        int x = 42;
+        auto a = x;        // a is int
+        decltype(x) b = x;  // b is int
+
+    In this case, both 'auto' and 'decltype' will deduce the same type ('int').
+
+    Differing Type Deduction:
+
+        const int x = 42;
+        auto a = x;        // a is int
+        decltype(x) b = x;  // b is const int
+
+    Here, 'auto' discards the top-level const, while 'decltype' preserves it. 'a' is deduced as 'int', whereas 'b' is deduced as 'const int'.
+
+    In summary, while both 'decltype' and 'auto' are used for type deduction,
+    'decltype' is more explicit and retains const and reference qualifications,
+    making it useful in scenarios where we need precise type information. 
+    'auto', on the other hand, is more convenient when you want the compiler to automatically deduce and possibly adjust the type.
+
+
+
