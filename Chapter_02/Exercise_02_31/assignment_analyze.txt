@@ -1,0 +1,43 @@
+/*
+    Exercise 2.31: Given the declarations in the previous exercise determine whether the
+    following assignments are legal. Explain how the top-level or low-level const applies in each case.
+
+        r1 = v2;
+        p1 = p2; p2 = p1;
+        p1 = p3; p2 = p3;
+*/
+
+
+// Solution by Jannatul Fardouse
+
+Let's analyze each assignment:
+
+        r1 = v2;
+        Legal. Assigning a non-constant reference ('r1') the value of a constant integer ('v2').
+        The top-level const in 'v2' doesn't affect the assignment.
+
+        p1 = p2;
+        Illegal. Assigning a non-constant pointer ('p1') the value of a pointer to a constant integer ('p2').
+        The low-level const in 'p2' prevents this assignment.
+
+        p2 = p1;
+        Legal. Assigning a pointer to a constant integer ('p2') the value of a non-constant pointer ('p1').
+        The low-level const in 'p2' doesn't affect the assignment.
+
+        p1 = p3;
+        Illegal. Assigning a non-constant pointer ('p1') the value of a constant pointer to a non-constant integer ('p3').
+        The low-level const in 'p3' prevents this assignment.
+
+        p2 = p3;
+        Legal. Assigning a pointer to a constant integer ('p2') the value of a constant pointer to a non-constant integer ('p3').
+        The low-level const in 'p2' and 'p3' is compatible.
+
+
+        In summary:
+
+                (1) Legal, top-level const doesn't affect the assignment.
+                (2) Illegal, low-level const in 'p2' prevents assigning to a non-constant pointer.
+                (3) Legal, low-level const in 'p2' doesn't affect the assignment.
+                (4) Illegal, low-level const in 'p3' prevents assigning to a non-constant pointer.
+                (5) Legal, low-level const in 'p2' and 'p3' are compatible.
+
