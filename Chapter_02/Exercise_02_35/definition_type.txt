@@ -1,0 +1,48 @@
+/*
+    Exercise 2.35: Determine the types deduced in each of the following definitions.
+    Once you’ve figured out the types, write a program to see whether you were correct.
+                const int i = 42;
+                auto j = i; const auto &k = i; auto *p = &i;
+                const auto j2 = i, &k2 = i;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's determine the types deduced in each of the following definitions:
+
+        'auto j = i;' : Deduced type for 'j' is 'int' (ignoring top-level const).
+
+        'const auto &k = i;' : Deduced type for 'k' is 'const int&'.
+
+        'auto *p = &i;' : Deduced type for 'p' is 'const int*'.
+
+        'const auto j2 = i, &k2 = i;' : Deduced type for 'j2' is 'const int', and for 'k2' is 'const int&'.
+
+    Now, let's write a program to check whether our deductions are correct:
+
+        #include <iostream>
+
+        int main() {
+            const int i = 42;
+
+            // Deduced types
+            auto j = i;              // Deduced type: int
+            const auto &k = i;       // Deduced type: const int&
+            auto *p = &i;            // Deduced type: const int*
+            const auto j2 = i, &k2 = i; // Deduced types: const int, const int&
+
+            // Print the deduced types
+            std::cout << "Deduced Types:" << std::endl;
+            std::cout << "j: " << typeid(j).name() << std::endl;
+            std::cout << "k: " << typeid(k).name() << std::endl;
+            std::cout << "p: " << typeid(p).name() << std::endl;
+            std::cout << "j2: " << typeid(j2).name() << std::endl;
+            std::cout << "k2: " << typeid(k2).name() << std::endl;
+
+            return 0;
+        }
+
+    This program uses typeid to print the deduced types.
+    We can run this program to verify whether our deductions align with the actual deduced types.
+

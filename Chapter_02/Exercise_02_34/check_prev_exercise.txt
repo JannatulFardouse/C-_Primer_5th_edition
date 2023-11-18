@@ -38,6 +38,5 @@
 
     This program declares the variables, prints their initial values, performs the assignments, 
     and then prints their values after the assignments.
-    We can run this program to verify the results and compare them with your predictions.
+    We can run this program to verify the results and compare them with the predictions.
 
-    
