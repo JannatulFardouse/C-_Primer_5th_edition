@@ -1,0 +1,20 @@
+/*
+    Exercise 2.33: Using the variable definitions from this section, determine what happens in each of these assignments:
+                
+                a = 42; b = 42; c = 42;
+                d = 42; e = 42; g = 42;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze the assignments based on this section:
+
+                a = 42; // The type of 'a' is deduced from the initializer, which is int. 'a' becomes an int.
+                b = 42; // The type of 'b' is deduced from the initializer, which is int. 'b' becomes an int.
+                c = 42; // The type of 'c' is deduced from the initializer, which is int. 'c' becomes an int.
+                d = 42; // The type of 'd' is deduced from the initializer, which is int. 'd' becomes an int.
+                e = 42; // The type of 'e' is deduced from the initializer, which is int. 'e' becomes an int.
+                g = 42; // The type of 'g' is deduced from the initializer, which is int. 'g' becomes an int.
+
+    In summary, each variable ('a', 'b', 'c', 'd', 'e', and 'g') is assigned the value '42', and their types are deduced as 'int'.
