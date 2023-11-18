@@ -1,0 +1,31 @@
+/*
+    Exercise 2.36: In the following code, determine the type of each variable and the value each variable has when the code finishes:
+                int a = 3, b = 4;
+                decltype(a) c = a;
+                decltype((b)) d = a;
+                ++c;
+                ++d;
+*/
+
+// Solution by Jannatul Fardouse
+
+    Let's analyze the code:
+
+                int a = 3, b = 4;
+                decltype(a) c = a;
+                decltype((b)) d = a;
+                ++c;
+                ++d;
+
+        'decltype(a) c = a;': The type of 'c' is 'int', and its value becomes '4' after '++c;'.
+        
+        'decltype((b)) d = a;': The type of 'd' is 'int&' (reference to 'int'), and its value becomes '4' after '++d;' 
+        because it is essentially a reference to 'a'.
+   
+    After the code finishes:
+
+                The value of 'a' remains '3'.
+                The value of 'b' remains '4'.
+                The value of 'c' becomes '4'.
+                The value of 'd' becomes '4'.
+
