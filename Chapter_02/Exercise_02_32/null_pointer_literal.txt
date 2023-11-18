@@ -1,0 +1,17 @@
+/*
+    Exercise 2.32: Is the following code legal or not? If not, how might you make it legal?
+                    
+                    int null = 0, *p = null;
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    The given code is not legal because it tries to initialize a pointer ('p') with an integer ('null').
+    To make it legal, you can initialize the pointer with a null pointer literal:
+
+        int null = 0;
+        int *p = nullptr;           // Legal: Initializing pointer with a null pointer literal
+
+    Using 'nullptr' is the preferred way to initialize pointers to represent a null or undefined value.
+
