@@ -1,0 +1,29 @@
+/*
+    Exercise 2.39: Compile the following program to see what happens when you forget
+    the semicolon after a class definition. Remember the message for future reference.
+
+                struct Foo { /* empty */ } // Note: no semicolon
+                int main()
+                {
+                return 0;
+                }
+
+*/
+
+// Solution by Jannatul Fardouse
+
+    When we forget the semicolon after a class definition, the compiler will likely generate an error.
+    In this specific case, the error is related to the absence of a semicolon after the closing brace of the struct definition.
+
+    Here's the corrected version:
+
+                struct Foo { /* empty */ };  // Note: semicolon added
+
+                int main()
+                {
+                    return 0;
+                }
+
+    Remember that in C++, a semicolon is required after a class or struct definition to indicate the end of the declaration.
+
+    
