@@ -1,0 +1,12 @@
+/*
+    Exercise 3.3: Explain how whitespace characters are handled in the string input operator and in the getline function.
+*/
+
+// Solution by Jannatul Fardouse
+
+
+The string input operator (>>) in C++ skips leading whitespace 
+and then reads characters until the next whitespace character is encountered.
+
+The getline function reads a line of input until a newline character ('\n') is encountered, 
+and it includes whitespace characters in the input.
